@@ -1,0 +1,125 @@
+<%- include( '/Users/Lenovo/Desktop/major project/views/includes/header.ejs' ) %> 
+
+
+
+
+
+<div id="filters">
+
+  <div class="filter">
+    <i class="fa-solid fa-fire"></i>
+    <p>
+      Trending
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-bed"></i>
+    <p>
+      Rooms
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-mountain-city"></i>
+    <p>
+      Iconic Cities
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-mountain-sun"></i>
+    <p>
+      Mountains
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-brands fa-fort-awesome"></i>
+    <p>
+      Castles
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-person-swimming"></i>
+    <p>
+      Amazing Pool
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-campground"></i>
+    <p>
+      Camping
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-cow"></i>
+    <p>
+      Farms
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-snowflake"></i>
+    <p>
+      Arctic
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-bed"></i>
+    <p>
+      Rooms
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-mountain-city"></i>
+    <p>
+      Iconic Cities
+    </p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-mountain-sun"></i>
+    <p>
+      Mountains
+    </p>
+  </div>
+
+  <div class="tax-toggle filter">
+    <div class="form-check-reverse form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">Display Taxes</label>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="allCards  mt-3">
+    <% for(let listing  of allListings) { %> 
+      <a href="/listings/<%- listing._id %>" class="listing-link">
+        <div class="card" style="width: 18rem;">
+            <img src="<%= listing.image.url %>" class="card-img-top" alt="...">
+            <div class="card-img-overlay"><i class="fa fa-compass" aria-hidden="true"></i></div>
+            <div class="card-body">
+                <h5 class="card-title"><%= listing.title %></h5>
+              <p class="card-text"><%= listing.description %></p>
+              <a href=""></a>
+              <p><b>RS: </b><%= listing.price.toLocaleString("en-PK") %> / Night  <i class="tax-info">+18% GST</i></p>
+              
+            </div>
+          </div>
+        </a>
+          <% } %>
+</div>
+
+
+
+
+<%- include( '/Users/Lenovo/Desktop/major project/views/includes/footer.ejs' ) %> 

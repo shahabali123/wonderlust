@@ -1,0 +1,70 @@
+<%- include( '/Users/Lenovo/Desktop/major project/views/includes/header.ejs' ) %> 
+
+
+<div class="form col-6 offset-3">
+    <h3>Log in to your Account: </h3>
+
+    <form action="/login" method="post" novalidate class="needs-validation">
+        <div>
+            <label 
+            for="username" class="form-label">Enter User name</label>
+            <input 
+            type="text" 
+            required 
+            placeholder="User Name" 
+            name="username" 
+            id="username" 
+            class="form-control">
+            <div class="valid-feedback">&#10003;</div>
+            <div class="invalid-feedback">User Name is required.</div>
+        </div>
+
+        <br>
+
+        <div>
+            <label 
+            for="password" class="form-label">password</label>
+            <input 
+            type="password" 
+            required 
+            placeholder="password" 
+            name="password" 
+            id="password" 
+            class="form-control">
+            <div class="valid-feedback">&#10003;</div>
+            <div class="invalid-feedback">password is required.</div>
+        </div>
+
+        <br>
+
+        <button class="btn btn-success">Login</button>
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include( '/Users/Lenovo/Desktop/major project/views/includes/footer.ejs' ) %> 

@@ -1,0 +1,71 @@
+<%- include( '/Users/Lenovo/Desktop/major project/views/includes/header.ejs' ) %> 
+
+<div class="row">
+    <div class="col-8 offset-2">
+    <div class="container">
+        <h3>Update Listing: </h3>
+        <form 
+        action="/listings/<%=listing._id%>?_method=PUT"
+         method="post"  
+         novalidate class="needs-validation"
+         enctype="multipart/form-data">
+            <div>
+            <label class="form-label" for="tltle">Title</label>
+            <textarea required class="form-control" type="text" name="title"><%= listing.title %></textarea>
+            <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+                <br>
+            <div>
+            <label class="form-label" for="description">Description</label>
+            <textarea required class="form-control" name="description" placeholder="write description" cols="30" rows="5"><%= listing.description %></textarea>
+            <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+                <br>
+            <div  class="w-50">
+                <label class="form-label">Original image</label><br>
+                <img src="<%= newImageUrl %>" alt="image not available" class=" img-thumbnail w-50 h-auto">
+            </div>
+            <br>
+
+            <div>
+            <label class="form-label" for="image">Upload new Image</label>
+            <input 
+            class="form-control" 
+            type="file" 
+            name="image">
+            </input>
+            <div class="valid-feedback">&#10003;</div>
+            <div class="invalid-feedback">This field is required.</div>
+            </div>
+                <br>
+            <div>
+            <label class="form-label" for="price">Price</label>
+            <input required class="form-control" name="price" type="number" placeholder="Price">
+            <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+                <br>
+            <div>
+            <label class="form-label" for="location">Location</label>
+            <textarea required class="form-control" type="text" name="location" placeholder="Location"><%= listing.location %></textarea>
+            <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+                <br>
+            <div>
+            <label class="form-label" for="country">Country</label>
+            <textarea class="form-control" type="text" name="country" placeholder="Country" required><%= listing.country %></textarea>
+            <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+                <br>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+    
+</div>
+</div>  
+   
+    <%- include( '/Users/Lenovo/Desktop/major project/views/includes/footer.ejs' ) %> 

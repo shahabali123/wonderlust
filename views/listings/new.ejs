@@ -1,0 +1,56 @@
+<%- include( '/Users/Lenovo/Desktop/major project/views/includes/header.ejs' ) %> 
+
+
+    <div class="form col-8 offset-2">
+        <h3>Create a new Listing: </h3>
+
+        <form action="/listings" 
+        method="post" 
+        novalidate 
+        class="needs-validation" 
+        enctype="multipart/form-data">
+            <div>
+                <label for="title" class="form-label">Title</label>
+                <input type="text" required placeholder="Title" name="title" class="form-control">
+                <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+            <br>
+            <div>
+                <label for="description" class="form-label">Description:</label>
+                <textarea name="description" required class="form-control" placeholder="write description" cols="30" rows="5"></textarea>
+                <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div>
+            </div><br>
+        
+            <div> 
+                <label for="image" class="form-label">Upload Image:</label>
+                <input type="file" class="form-control" required name="image">
+                <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div>
+            </div><br>
+            <div>
+                <label for="price">Price:</label>
+                <input type="number" class="form-control" required name="price" placeholder="Price">
+                <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div>
+            </div><br>
+            <div>
+                <label for="location" class="form-label" >Location:</label>
+                <input type="text" class="form-control" name="location" required placeholder="Location">
+                <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div><br>
+            </div>
+            <div>
+                <label for="country" class="form-label">Country:</label>
+                <input type="text" class="form-control" name="country" required placeholder="Country">
+                <div class="valid-feedback">&#10003;</div>
+                <div class="invalid-feedback">This field is required.</div>
+            </div><br>
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+    </div>
+    
+
+
+    <%- include( '/Users/Lenovo/Desktop/major project/views/includes/footer.ejs' ) %> 

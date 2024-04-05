@@ -1,0 +1,86 @@
+<%- include( '/Users/Lenovo/Desktop/major project/views/includes/header.ejs' ) %> 
+
+
+<div class="form col-6 offset-3">
+    <h3>Create a new Account: </h3>
+
+    <form action="/signup" method="post" novalidate class="needs-validation">
+        <div>
+            <label 
+            for="username" class="form-label">User name</label>
+            <input 
+            type="text" 
+            required 
+            placeholder="User Name" 
+            name="username" 
+            id="username" 
+            class="form-control">
+            <div class="valid-feedback">&#10003;</div>
+            <div class="invalid-feedback">User Name is required.</div>
+        </div>
+
+        <br>
+
+        <div>
+            <label 
+            for="email" class="form-label">Email</label>
+            <input 
+            type="text" 
+            required 
+            placeholder="Email" 
+            name="email" 
+            id="email" 
+            class="form-control">
+            <div class="valid-feedback">&#10003;</div>
+            <div class="invalid-feedback">Email is required.</div>
+        </div>
+
+        <br>
+
+        <div>
+            <label 
+            for="password" class="form-label">password</label>
+            <input 
+            type="password" 
+            required 
+            placeholder="password" 
+            name="password" 
+            id="password" 
+            class="form-control">
+            <div class="valid-feedback">&#10003;</div>
+            <div class="invalid-feedback">password is required.</div>
+        </div>
+
+        <br>
+
+        <button class="btn btn-success">Register</button>
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include( '/Users/Lenovo/Desktop/major project/views/includes/footer.ejs' ) %> 
