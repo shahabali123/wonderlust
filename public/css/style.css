@@ -2,9 +2,13 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
 }
 .container{
     flex: 1;
+    min-height: 100vh;
 }
 /* NavBar */
 .navbar{
@@ -79,16 +83,22 @@ body{
 }
 /* footer */
 footer{
-    position: relative;
+    position: static;
     bottom: 0;
     width: 100%;
 }
 .form{
-    /* display: flex;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-self: center; */
-    padding: 4rem 10rem;
+    align-self: center;
+    height: 100vh;
+    width: 85vw;
+    /* padding: 4rem 10rem; */
+}
+.form form{
+    width: 100%;
 }
 .btns{
     display: flex;
@@ -109,6 +119,10 @@ footer{
     display: flex;
     align-items: center;
     gap: 1rem;
+    overflow: scroll;
+  }
+  ::-webkit-scrollbar{
+    display: none;
   }
   .filter{
     display: flex;

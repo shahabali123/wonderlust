@@ -88,7 +88,7 @@
 //     await Listing.findByIdAndDelete(id);    
 //     req.flash("success","Successfully deleted a listing!");
 //     res.redirect("/listings");
-// };
+// };;
 
 
 const Listing = require("../models/listing.js");

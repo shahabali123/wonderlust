@@ -18,7 +18,6 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const multer  = require('multer')
-// const upload = multer({ dest: 'uploads/' })
 
 
 // import routes
